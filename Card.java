@@ -42,7 +42,7 @@ public class Card
 	
 	public String getPicureName()
 	{
-		return this.PictureName;
+		return this.pictureName;
 	}
 	
 	public String toString()
@@ -58,18 +58,20 @@ public class Card
 		int value = 0;
 		
 		if(cardRank.equals("J") || cardRank.equals("Q")|| cardRank.equals("K"))
+		{
 			value = 10;
-		else if(cardRank.equals("A")){
+		}	
+		else if(cardRank.equals("A"))
+		{
 			value = 1;
+		}	
 		else
+		{
 			value = Integer.parseInt(cardRank);
-				
+		}
+
 		return value;
 	}
 	
-	// public Boolean war(Card card1, Card card2)
-	// {
-		
-	// }
 }
 

@@ -6,11 +6,11 @@ public class Game
 {
 	public static void main(String[] args)
 	{
-		deck = new Deck();
-		deck.shuffle;
+		Deck deck = new Deck();
+		deck = deck.shuffle;
 		Hand cpuHand, playerHand;
 		createHand(cpuHand,playerHand);
 
-		
+
 	}
 }

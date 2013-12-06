@@ -7,9 +7,9 @@ import java.util.ArrayList;
 
 public class Deck extends Card
 {
-	private ArrayList<card> cards = new ArrayList(51);
+	private ArrayList<Card> cards = new ArrayList(51);
 	
-	Deck()
+	public Deck()
 	{	
 		//Populate the deck
 		createDeck();
@@ -58,7 +58,8 @@ public class Deck extends Card
 		return str;
 	}
 	
-	public void shuffle(){
+	public void shuffle()
+	{
 		Collections.shuffle(this.cards);
 	}
 
