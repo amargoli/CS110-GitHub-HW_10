@@ -4,13 +4,23 @@
 
 import java.util.ArrayList;
 
-public class Hand 
+public class Hand extends Deck
 {	
 	private ArrayList<Card> hand = new ArrayList();
-	
 	public Hand()
 	{}
 	
+	public void createHand(Hand hand1, Hand hand2)
+	{
+		for(int i=0; i<25; i++)
+		{
+			hand1[i] = getCard[i];	
+		}
+		for(int i=26; i<51; i++)
+		{
+			hand1[i] = getCard[i];	
+		}
+	}
 	public void add(Card card)
 	{
 		hand.add(card);

@@ -2,20 +2,20 @@
 //HW 10- War Game
 //Deck.java
 
-import java.util.ArrayList;
 import java.util.Collections;
+import java.util.ArrayList;
 
-public class Deck
+public class Deck extends Card
 {
 	private ArrayList<card> cards = new ArrayList(51);
 	
 	Deck()
 	{	
 		//Populate the deck
-		CreateDeck();
+		createDeck();
 	}
 	
-	private void CreateDeck()
+	private void createDeck()
 	{
 		String[] ranks = {"2", "3", "4", "5", "6" ,"7", "8", "9", "10", "J", "Q", "K", "A"};
 		String[] suits = {"H", "D", "S", "C"};
@@ -38,12 +38,14 @@ public class Deck
 		return topCard;
 	}
 	
-	public ArrayList<Card> getDeck(){
+	public ArrayList<Card> getDeck()
+	{
 		
 		return this.cards;
 	}
 	
-	public String toString(){
+	public String toString()
+	{
 		String str;
 		Card tempCard;
 		
@@ -58,6 +60,11 @@ public class Deck
 	
 	public void shuffle(){
 		Collections.shuffle(this.cards);
+	}
+
+	public Card getCard(int x)
+	{
+		return cards.get(x);
 	}
 
 }

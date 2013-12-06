@@ -51,20 +51,6 @@ public class Card
 		return stringValue;
 	}
 
-	public boolean equals(String rank, String suit)
-	{
-		if(suit.equals(this.suit) && rank.equals(this.rank))
-			return true;
-		else
-			return false;
-	}
-	
-	//Make a 2nd equals function to accept just the card as the parameter
-	public boolean equals(Card card)
-	{
-		return equals(card.getRank(), card.getSuit());
-	}
-	
 	public static int getValue(Card card)
 	{
 		String cardRank = card.getRank();
@@ -81,18 +67,9 @@ public class Card
 		return value;
 	}
 	
-	public static int compare(Card card1, Card card2)
-	{
-		int val1, val2;
-		val1 = getValue(card1);
-		val2 = getValue(card2);
+	// public Boolean war(Card card1, Card card2)
+	// {
 		
-		if(val1 > val2)
-			return -1;
-		else if(val2>val1)
-			return 1;
-		else
-			return 0;
-	}
+	// }
 }
 
